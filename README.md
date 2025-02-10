@@ -52,8 +52,10 @@ pip install -r requirements_dev.txt
 
 The `requirements.txt` file contains the libraries needed for deployment.
 
-### Preperation for CorrNet
-Detailed instructions can be found in the CorrNet folder readme.
+### Preperation for CorrNet  
+The underlying model is trained on the RWTH-PHOENIX-Weather 2014 dataset.  
+Detailed instructions can be found in the CorrNet folder readme.  
+
 CorrNet requires a pretrained model to perform sign language recognition.
 1. Create a directory for the model: `CorrNet/pretrained_model`
 2. [Download](https://drive.google.com/file/d/1Xt_4N-HjEGlVyrMENydsxNtpVMSg5zDb/view) the pretrained CorrNet model and place it in the diretory
