@@ -61,7 +61,7 @@ CorrNet requires a pretrained model to perform sign language recognition.
 ### Preperation for Gloss2Text
 Please [download](https://drive.google.com/file/d/1eoV_DNfuEXXSLMCM3WwHgPzgGEuWLCSD/view?usp=sharing) the file adapter_model.bin (100 MB / final adapter model) and put it into the `Gloss2Text2Speech/pretrained` folder.
 
-### Preperation for TextToSpeech
+### Preperation for Text2Speech
 To run the audio file, please create an .env file and put it into the main directory
 ```BASH
 AZUREENDPOINT=
