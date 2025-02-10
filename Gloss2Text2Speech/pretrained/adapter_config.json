@@ -1,0 +1,31 @@
+{
+  "alpha_pattern": {},
+  "auto_mapping": null,
+  "base_model_name_or_path": "facebook/nllb-200-3.3B",
+  "bias": "none",
+  "fan_in_fan_out": false,
+  "inference_mode": true,
+  "init_lora_weights": true,
+  "layers_pattern": null,
+  "layers_to_transform": null,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "modules_to_save": null,
+  "peft_type": "LORA",
+  "r": 16,
+  "rank_pattern": {},
+  "revision": null,
+  "target_modules": [
+    "up_proj",
+    "q_proj",
+    "o_proj",
+    "fc1",
+    "gate_proj",
+    "down_proj",
+    "fc2out_proj",
+    "lm_head",
+    "v_proj",
+    "k_proj"
+  ],
+  "task_type": "SEQ_2_SEQ_LM"
+}
