@@ -47,7 +47,7 @@ pyenv local 3.9.17
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install -r requirements_dev.txt
+pip install -r requirements.txt
 ```
 
 The `requirements.txt` file contains the libraries needed for deployment.
