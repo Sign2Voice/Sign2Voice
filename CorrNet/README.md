@@ -82,6 +82,8 @@ If you get an error like ```IndexError: list index out of range``` on the PHOENI
 
 ## Inference
 
+The following results were achieved with the original CorrNet model, which used CTCDecode for decoding. Our model, using the torchaudio CTC decoder, achieves a WER of 29.37% on the PHOENIX2014 dataset.
+
 ### PHOENIX2014 dataset
 
 | Backbone | Dev WER  | Test WER  | Pretrained model                                             |

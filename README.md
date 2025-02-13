@@ -82,7 +82,8 @@ If you want to test the model and you need the .env please write us an inquiry.
 ## Usage
 ### Frames to audio output
 To run the application, use the following command:
-```streamlit run st_to_txt/streamlit_app.py```
+```streamlit run st_to_txt/streamlit_app.py```  
+To test one set of frames you can download frames [here](https://drive.google.com/drive/folders/10bEnCG7dJIkHp7uo8-WTyGc1kYiO4pRF?usp=drive_link).
 ### One test video to glosses
 To run the application, use the following command:
 ```streamlit run st_to_txt/streamlit_video_app.py```
@@ -100,10 +101,12 @@ Our project is built upon several open-source frameworks and pretrained models. 
 - Paper: [CorrNet Research Paper](https://arxiv.org/abs/2303.03202)
 
 ### Gloss2Text (Text Generation from Glosses)
-- Repository: Gloss2Text Model
-- Paper: Gloss2Text Paper
+- Repository: [Gloss2Text Model](https://github.com/pooyafayyaz/Gloss2Text)
+- Paper: [Gloss2Text Paper](https://aclanthology.org/2024.findings-emnlp.947/)
  
-
+### Text-to-Speech (TTS)
+- Repository: [ReallyEasyAI](https://github.com/ReallyEasyAI/Working-with-the-Audio-APIs)
+- Documentation: [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech)
 
 
 
