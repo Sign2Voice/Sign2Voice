@@ -7,6 +7,13 @@ We want to develop an application that enables deaf people to communicate with h
 - Conversion of glosses into natural text
 - Speech output of the generated text (Text-to-Speech)
 
+## Team
+- Benedikt Gramß: [Github_benigram](https://github.com/benigram)   
+- Oliver Puerner: [Github_olipue](https://github.com/olipue)  
+- Felix Sattler: [Github_FelixSattler](https://github.com/FelixSattler)  
+- Maximilian Scheel: [Github_maximilian-scheel](https://github.com/maximilian-scheel)  
+- Vanessa Tuerker: [Github_VanessaTuerker](https://github.com/VanessaTuerker)  
+
 ## Architecture of Sign2Voice
 Our system is structured in a modular pipeline, where each component plays a specific role in processing sign language gestures and converting them into speech. The architecture consists of four main stages:
 
