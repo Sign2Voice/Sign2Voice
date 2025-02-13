@@ -27,10 +27,10 @@ Our system is structured in a modular pipeline, where each component plays a spe
 - CorrNet processes the input frames and predicts a sequence of glosses, which represent the recognized signs.
 - The output at this stage is a structured sequence of glosses that will later be converted into natural text.
 
-### 3️⃣ Gloss-to-Text Translation
-- The predicted glosses are translated into full sentences using our **Gloss2Text** model.
+### 3️⃣ Sign Language Translation (Gloss-to-Text)
+- The predicted glosses are translated into full sentences using the **Gloss2Text** model.
 - Gloss2Text ensures that the generated sentences are grammatically correct and contextually meaningful.
-- The final output of this step is a fully structured natural language sentence, making it easier for non-signing people to understand
+- The final output of this step is a fully structured natural language sentence, making it easier for non-signing people to understand.
 
 ### 4️⃣ Text-to-Speech Conversion (Output)
 - The generated sentence is sent to the OpenAI Text-to-Speech Model via the Audio API.
@@ -59,16 +59,16 @@ pip install -r requirements.txt
 
 The `requirements.txt` file contains the libraries needed for deployment.
 
-### Preperation for CorrNet
+### Preparation for CorrNet
 Detailed instructions can be found in the CorrNet folder readme.
 CorrNet requires a pretrained model to perform sign language recognition.
 1. Create a directory for the model: `CorrNet/pretrained_model`
 2. [Download](https://drive.google.com/file/d/1Xt_4N-HjEGlVyrMENydsxNtpVMSg5zDb/view) the pretrained CorrNet model and place it in the diretory
 
-### Preperation for Gloss2Text
+### Preparation for Gloss2Text
 Please [download](https://drive.google.com/file/d/1eoV_DNfuEXXSLMCM3WwHgPzgGEuWLCSD/view?usp=sharing) the file adapter_model.bin (100 MB / final adapter model) and put it into the `Gloss2Text2Speech/pretrained` folder.
 
-### Preperation for Text2Speech
+### Preparation for Text2Speech
 To run the audio file, please create an .env file and put it into the main directory
 ```BASH
 AZUREENDPOINT=
