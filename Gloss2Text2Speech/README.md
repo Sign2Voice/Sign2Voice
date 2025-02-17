@@ -1,25 +1,26 @@
-<div align="center">
+### Introductory remarks
+#### GLOSS2TEXT
+- The GLOSS2TEXT and its README are modified versions of [[GLOSS"TEXT]](https://github.com/pooyafayyaz/Gloss2Text)
+- The corresponding research paper is 'GLOSS2TEXT: Sign Language Gloss translation using LLMs and Semantically Aware Label Smoothing'[[paper]](https://aclanthology.org/2024.findings-emnlp.947/)
+
+#### Text2Speech
+- The Text2Speech and its README are modified versions of [[Working with the Audio APIs]](https://github.com/ReallyEasyAI/Working-with-the-Audio-APIs)
+- The corresponding documentation is [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech)
+
 
 # GLOSS2TEXT & Text2Speech
-## 1. GLOSS2TEXT: Sign Language Gloss translation using LLMs and Semantically Aware Label Smoothing
 
-[![arXiv](https://img.shields.io/badge/arXiv-GLOSS2TEXT-A10717.svg?logo=arXiv)](https://arxiv.org/abs/2407.01394)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+## Prerequisites
+- pyenv with Python: 3.9.17
+- You can install all required modules directly from the parent folder requirements.
 
-</div>
+## Dataset
+We used a pre-trained model trained on the [Phoenix-2014T dataset](https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/), a German continuous sign language recognition and translation benchmark data set with gloss and translation pairs.
 
-## Description
-Official PyTorch implementation of the paper:
-<div align="center">
+## Preparation for Gloss2Text
+Please [download](https://drive.google.com/file/d/1eoV_DNfuEXXSLMCM3WwHgPzgGEuWLCSD/view?usp=sharing) the file adapter_model.bin (100 MB / final adapter model) and put it into the `Gloss2Text2Speech/pretrained` folder.  
 
-[GLOSS2TEXT: Sign Language Gloss translation using LLMs and Semantically Aware Label Smoothing](https://aclanthology.org/2024.findings-emnlp.947/).
-
-<img src="imgs/arch.png" alt="Description of the image" width="400"/>
-
-</div>
-
-### Pre-trained model
-Use of a pre-trained model with the support of the author. Thanks to:
+The pre-trained model was kindly provided by the author Pooya Fayyazsanavi:
 
 ```
 @inproceedings{fayyazsanavi-etal-2024-gloss2text,
@@ -42,51 +43,19 @@ Use of a pre-trained model with the support of the author. Thanks to:
 
 ```
 
-## 2. Text2Speech
-Stream and play audio in real-time. TTS model used: tts-1-hd
-
-
-## Installation:
-To set up the environment, run:
-
+## Preparation for Text2Speech
+To run the audio file, please create an .env file and put it into the main directory
+```BASH
+AZUREENDPOINT=
+APIKEY=
+AZUREDEPLOYMENT=
+APIVERSION=
 ```
-pip install -r requirements.txt
-```
-Python version 3.8.20., requirements in the datafolder Gloss2Text2Speech
+If you want to test the model and you need the .env please write us an inquiry.
 
-```
-conda create -n slt python=3.8.20
-```
-may also work ....
-
-## Dataset:
-Pre-trained model trained on Phoenix-2014T data set.
-
-Please follow the link to download the [Phoenix-2014T dataset](
-https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/), the dataset is a german sign lanugae consisting the gloss and translation pairs:
-
-The following data was provided by the author Pooya Fayyazsanavi:
-
-*Already in the repo*
-- adapter_config.json
-- README.md
-
-*Please download the file (100 MB / final adapter model) and put it into the "pretrained" folder:*
-- adapter_model.bin
-
-## Infrastructure:
-
-To run the audio file, please create an .env file with your:
-
-AZUREENDPOINT=   
-APIKEY=  
-AZUREDEPLOYMENT=  
-APIVERSION=  
-
-## Testing :rocket:
-Make sure that the paths in the code are updated. 
-To start testing, run the following command. Modify any arguments as needed:
-
+## Testing the pre-trained model
+- Make sure that the paths in `model_g2t_t2s_new.py` are updated
+- To start testing, run the following command. Modify any arguments as needed:
 ```
 python model_g2t_t2s_new.py
 ```
@@ -96,7 +65,6 @@ To open it in Streamlit, please enter it directly in the terminal:
 streamlit run /Users/...../Gloss2Text2Speech/
 model_g2t_t2s_new.py
 ```
-(please adjust path
-)
-## License :books:
+
+## License
 This code depends on several libraries, including PyTorch, HuggingFace, and Two-Stream Network. It also uses the Phoenix-2014T dataset. Please ensure compliance with their respective licenses.

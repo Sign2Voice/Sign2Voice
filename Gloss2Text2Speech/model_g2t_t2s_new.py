@@ -21,8 +21,8 @@ import sys
 # device = torch.device('cpu')
 
 # Paths to the files (please customise)
-adapter_model_path = "/Users/beni/projects/capstone_sl_txt_voice/Gloss2Text2Speech/pretrained"
-adapter_config_path = "/Users/beni/projects/capstone_sl_txt_voice/Gloss2Text2Speech/pretrained"
+adapter_model_path = "/Users/beni/projects/Sign2Voice/Gloss2Text2Speech/pretrained"
+adapter_config_path = "/Users/beni/projects/Sign2Voice/Gloss2Text2Speech/pretrained"
 
 # Load the base model and the tokeniser
 base_model_name = "facebook/nllb-200-3.3B"
