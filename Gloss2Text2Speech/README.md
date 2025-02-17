@@ -41,7 +41,6 @@ The pre-trained model was kindly provided by the author Pooya Fayyazsanavi:
 }
 
 ```
-<div align="center">
 
 ## Preparation for Text2Speech
 To run the audio file, please create an .env file and put it into the main directory
