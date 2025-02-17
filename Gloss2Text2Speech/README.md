@@ -51,7 +51,7 @@ APIKEY=
 AZUREDEPLOYMENT=
 APIVERSION=
 ```
-If you want to test the model and you need the .env please write us an inquiry.
+If you want to test the model you need to have your own Azure Account.
 
 ## Testing the pre-trained model
 - Make sure that the paths in `model_g2t_t2s_new.py` are updated
