@@ -17,9 +17,6 @@ import os
 import streamlit as st
 import sys
 
-# Definiere das Gerät als CPU
-# device = torch.device('cpu')
-
 # Paths to the files (please customise)
 adapter_model_path = "/Sign2Voice/Gloss2Text2Speech/pretrained"
 adapter_config_path = "/Sign2Voice/Gloss2Text2Speech/pretrained"
@@ -31,9 +28,6 @@ model = AutoModelForSeq2SeqLM.from_pretrained(base_model_name)
 
 # Load the adapter configuration and the model
 model.load_adapter(adapter_model_path)
-
-# Verschiebe das Modell auf die CPU
-#model.to(device)
 
 # Test the model
 # Sample data structure that represents a list of lists of tuples (Alternatively, a sample text can be entered manually)
@@ -57,8 +51,6 @@ output = model.generate(inputs.input_ids, max_length=50)
 output_text = tokenizer.decode(output[0], skip_special_tokens=True)
 print(output_text)
 
-
-
 # Load environment variables from .env file
 load_dotenv()
 
@@ -76,19 +68,8 @@ client = AzureOpenAI(
     api_version=APIVERSION
 )
 
-# # Define text
-# text = """Am Mittwoch wechselnd bis stark bewölkt, dabei im Norden teils Regen, sonst einige Schauer, 
-# in Hochlagen teils mit Schnee vermischt. Im Süden länger trocken mit sonnigen Abschnitten. Höchsttemperaturen 6 bis 12 Grad, 
-# mit den höchsten Werten entlang des Oberrheins. Mäßiger, im Norden und im Bergland teils frischer und in Böen starker bis 
-# stürmischer Südwest- bis Westwind. In der Nacht zum Donnerstag im Norden, später auch ganz im Westen etwas Regen, 
-# im Süden und Osten teils gering bewölkt und trocken. Später Nebelbildung. Tiefstwerte im Süden und im Bergland 0 bis -5 Grad, 
-# sonst 4 bis 0 Grad."""
-
 # Streamlit-Layout
 st.title("Echtzeit Text-to-Speech")
-# st.write("Geben Sie einen Text ein. Die Sprachausgabe wird nach der Eingabe an das Open AI TTS model űbergeben und direkt gestreamt.")
-# Text-Eingabefeld
-# text = st.text_area("Text eingeben", height=200)
 
 text = output_text
 

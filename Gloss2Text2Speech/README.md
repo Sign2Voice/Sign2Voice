@@ -7,7 +7,6 @@
 - The Text2Speech and its README are modified versions of [[Working with the Audio APIs]](https://github.com/ReallyEasyAI/Working-with-the-Audio-APIs)
 - The corresponding documentation is [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech)
 
-
 # GLOSS2TEXT & Text2Speech
 
 ## Prerequisites
@@ -42,6 +41,7 @@ The pre-trained model was kindly provided by the author Pooya Fayyazsanavi:
 }
 
 ```
+<div align="center">
 
 ## Preparation for Text2Speech
 To run the audio file, please create an .env file and put it into the main directory
@@ -59,7 +59,8 @@ If you want to test the model you need to have your own Azure Account.
 ```
 python model_g2t_t2s_new.py
 ```
-To open it in Streamlit, please enter it directly in the terminal:
+To open it in Streamlit, please enter it directly in the terminal (please adjust path
+):
 
 ```
 streamlit run /Users/...../Gloss2Text2Speech/
